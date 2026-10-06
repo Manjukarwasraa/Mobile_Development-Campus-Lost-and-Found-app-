@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="#F7F8FC">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingBottom="14dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CampusFind" android:textSize="27sp" android:textStyle="bold" android:textColor="#172B4D" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Campus Lost &amp; Found" android:textSize="13sp" android:textColor="#6B7280" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔎" android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="150dp" android:orientation="vertical" android:padding="18dp" android:background="#3159C8">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lost something?" android:textSize="21sp" android:textStyle="bold" android:textColor="#FFFFFF" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Find lost items or report something you found on campus." android:textSize="14sp" android:textColor="#E8EEFF" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPostItem" android:layout_width="wrap_content" android:layout_height="42dp" android:layout_marginTop="10dp" android:text="Post an Item" android:textColor="#3159C8" android:backgroundTint="#FFFFFF" />
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Campus Overview" android:textSize="19sp" android:textStyle="bold" android:textColor="#172B4D" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="105dp" android:layout_marginTop="10dp" android:orientation="horizontal" android:baselineAligned="false">
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardLost" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="5dp" app:cardCornerRadius="14dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:background="#FFF1F1">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔴" android:textSize="18sp" />
+                <TextView android:id="@+id/txtLostCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#D32F2F" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lost Items" android:textSize="12sp" android:textColor="#666666" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardFound" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" app:cardCornerRadius="14dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:background="#F0FFF2">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🟢" android:textSize="18sp" />
+                <TextView android:id="@+id/txtFoundCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#2E9B45" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Found Items" android:textSize="12sp" android:textColor="#666666" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardResolved" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="5dp" app:cardCornerRadius="14dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:background="#EEF4FF">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textSize="20sp" android:textStyle="bold" android:textColor="#3159C8" />
+                <TextView android:id="@+id/txtResolvedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="24sp" android:textStyle="bold" android:textColor="#3159C8" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resolved" android:textSize="12sp" android:textColor="#666666" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Recent Active Items" android:textSize="19sp" android:textStyle="bold" android:textColor="#172B4D" />
+    <TextView android:id="@+id/txtEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="18dp" android:text="No active items yet" android:textSize="14sp" android:textColor="#888888" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerHome" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="5dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fabAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="end" android:layout_marginTop="10dp" android:src="@android:drawable/ic_input_add" android:contentDescription="Post item" />
+</LinearLayout>
+</ScrollView>

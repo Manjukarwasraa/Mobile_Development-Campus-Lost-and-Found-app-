@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F7F8FC">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Profile" android:textSize="27sp" android:textStyle="bold" android:textColor="#172B4D" />
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Your contact details are saved on this device." android:textSize="14sp" android:textColor="#6B7280" />
+<EditText android:id="@+id/edtProfileName" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="20dp" android:hint="Full name" android:inputType="textCapWords" />
+<EditText android:id="@+id/edtProfileRoll" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:hint="Roll number" android:inputType="text" />
+<EditText android:id="@+id/edtProfilePhone" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:hint="Phone number" android:inputType="phone" />
+<EditText android:id="@+id/edtProfileEmail" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:hint="Email" android:inputType="textEmailAddress" />
+<Button android:id="@+id/btnSaveProfile" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="16dp" android:text="Save Profile" />
+</LinearLayout>
+</ScrollView>
